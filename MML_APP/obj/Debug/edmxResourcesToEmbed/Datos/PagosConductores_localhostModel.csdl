@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PagoConductores_localhostModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PAGO_CONDUC_PRUEBA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" />
+    <Property Name="CONCEPTO" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+    <Property Name="CONTRATO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="DES_MERCADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="COD_PUESTO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="COD_PASAJE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="COD_LETRA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CANO" Type="Int16" />
+    <Property Name="PERIODO" Type="Byte" />
+    <Property Name="CANO_PERIODO" Type="Int32" />
+    <Property Name="VALOR1" Type="Byte" />
+    <Property Name="EMISION" Type="Boolean" />
+    <Property Name="SERVICIO" Type="Boolean" />
+    <Property Name="MORA" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="CAJA" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="ANO_CANCELACION" Type="Int16" />
+    <Property Name="MES_CANCELACION" Type="Byte" />
+    <Property Name="FEC_CANCELACION" Type="DateTime" />
+    <Property Name="NUM_CANCELACION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COD_MERCADO" Type="Byte" />
+    <Property Name="DOC_IDENTIDAD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COD_NOMBRE" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="NUM_CONTRATO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="ANO_CONTRATO" Type="Int16" />
+    <Property Name="INI_CONTRATO" Type="DateTime" />
+    <Property Name="FIN_CONTRATO" Type="DateTime" />
+    <Property Name="MON_CONTRATO" Type="Byte" />
+    <Property Name="AUTPAGO" Type="Boolean" />
+    <Property Name="ESTADO_DEL_PUESTO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="NOM_GIRO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="NOM_ACTIVIDAD" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="PagoConductoresLocalhostEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PAGO_CONDUC_PRUEBA" EntityType="Self.PAGO_CONDUC_PRUEBA" />
+  </EntityContainer>
+</Schema>

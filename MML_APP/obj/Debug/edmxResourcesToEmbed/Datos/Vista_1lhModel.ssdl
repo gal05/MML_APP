@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VistaModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GUERRA.VISTA_PAG_COND_PRUEBA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VISTA_PAG_COND_PRUEBA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="CONCEPTO" Type="varchar2" MaxLength="26" />
+    <Property Name="CONTRATO" Type="varchar2" MaxLength="12" />
+    <Property Name="DES_MERCADO" Type="varchar2" MaxLength="30" />
+    <Property Name="COD_PUESTO" Type="varchar2" MaxLength="5" />
+    <Property Name="COD_PASAJE" Type="varchar2" MaxLength="2" />
+    <Property Name="COD_LETRA" Type="varchar2" MaxLength="2" />
+    <Property Name="CANO" Type="number" Precision="4" Scale="0" />
+    <Property Name="PERIODO" Type="number" Precision="2" Scale="0" />
+    <Property Name="CANO_PERIODO" Type="number" Precision="6" Scale="0" />
+    <Property Name="VALOR1" Type="number" Precision="3" Scale="0" />
+    <Property Name="EMISION" Type="number" Precision="1" Scale="0" />
+    <Property Name="SERVICIO" Type="number" Precision="1" Scale="0" />
+    <Property Name="MORA" Type="number" Precision="3" Scale="2" />
+    <Property Name="CAJA" Type="varchar2" MaxLength="9" />
+    <Property Name="ANO_CANCELACION" Type="number" Precision="4" Scale="0" />
+    <Property Name="MES_CANCELACION" Type="number" Precision="2" Scale="0" />
+    <Property Name="FEC_CANCELACION" Type="date" />
+    <Property Name="NUM_CANCELACION" Type="varchar2" MaxLength="10" />
+    <Property Name="COD_MERCADO" Type="number" Precision="3" Scale="0" />
+    <Property Name="DOC_IDENTIDAD" Type="varchar2" MaxLength="10" />
+    <Property Name="COD_NOMBRE" Type="varchar2" MaxLength="70" />
+    <Property Name="NUM_CONTRATO" Type="varchar2" MaxLength="5" />
+    <Property Name="ANO_CONTRATO" Type="number" Precision="4" Scale="0" />
+    <Property Name="INI_CONTRATO" Type="date" />
+    <Property Name="FIN_CONTRATO" Type="date" />
+    <Property Name="MON_CONTRATO" Type="number" Precision="3" Scale="0" />
+    <Property Name="AUTPAGO" Type="number" Precision="1" Scale="0" />
+    <Property Name="ESTADO_DEL_PUESTO" Type="varchar2" MaxLength="17" />
+    <Property Name="NOM_GIRO" Type="varchar2" MaxLength="25" />
+    <Property Name="NOM_ACTIVIDAD" Type="varchar2" MaxLength="24" />
+  </EntityType>
+  <EntityContainer Name="VistaModelStoreContainer">
+    <EntitySet Name="VISTA_PAG_COND_PRUEBA" EntityType="Self.VISTA_PAG_COND_PRUEBA" store:Type="Views" store:Schema="GUERRA">
+      <DefiningQuery>SELECT 
+"VISTA_PAG_COND_PRUEBA"."ID" AS "ID", 
+"VISTA_PAG_COND_PRUEBA"."CONCEPTO" AS "CONCEPTO", 
+"VISTA_PAG_COND_PRUEBA"."CONTRATO" AS "CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."DES_MERCADO" AS "DES_MERCADO", 
+"VISTA_PAG_COND_PRUEBA"."COD_PUESTO" AS "COD_PUESTO", 
+"VISTA_PAG_COND_PRUEBA"."COD_PASAJE" AS "COD_PASAJE", 
+"VISTA_PAG_COND_PRUEBA"."COD_LETRA" AS "COD_LETRA", 
+"VISTA_PAG_COND_PRUEBA"."CANO" AS "CANO", 
+"VISTA_PAG_COND_PRUEBA"."PERIODO" AS "PERIODO", 
+"VISTA_PAG_COND_PRUEBA"."CANO_PERIODO" AS "CANO_PERIODO", 
+"VISTA_PAG_COND_PRUEBA"."VALOR1" AS "VALOR1", 
+"VISTA_PAG_COND_PRUEBA"."EMISION" AS "EMISION", 
+"VISTA_PAG_COND_PRUEBA"."SERVICIO" AS "SERVICIO", 
+"VISTA_PAG_COND_PRUEBA"."MORA" AS "MORA", 
+"VISTA_PAG_COND_PRUEBA"."CAJA" AS "CAJA", 
+"VISTA_PAG_COND_PRUEBA"."ANO_CANCELACION" AS "ANO_CANCELACION", 
+"VISTA_PAG_COND_PRUEBA"."MES_CANCELACION" AS "MES_CANCELACION", 
+"VISTA_PAG_COND_PRUEBA"."FEC_CANCELACION" AS "FEC_CANCELACION", 
+"VISTA_PAG_COND_PRUEBA"."NUM_CANCELACION" AS "NUM_CANCELACION", 
+"VISTA_PAG_COND_PRUEBA"."COD_MERCADO" AS "COD_MERCADO", 
+"VISTA_PAG_COND_PRUEBA"."DOC_IDENTIDAD" AS "DOC_IDENTIDAD", 
+"VISTA_PAG_COND_PRUEBA"."COD_NOMBRE" AS "COD_NOMBRE", 
+"VISTA_PAG_COND_PRUEBA"."NUM_CONTRATO" AS "NUM_CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."ANO_CONTRATO" AS "ANO_CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."INI_CONTRATO" AS "INI_CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."FIN_CONTRATO" AS "FIN_CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."MON_CONTRATO" AS "MON_CONTRATO", 
+"VISTA_PAG_COND_PRUEBA"."AUTPAGO" AS "AUTPAGO", 
+"VISTA_PAG_COND_PRUEBA"."ESTADO_DEL_PUESTO" AS "ESTADO_DEL_PUESTO", 
+"VISTA_PAG_COND_PRUEBA"."NOM_GIRO" AS "NOM_GIRO", 
+"VISTA_PAG_COND_PRUEBA"."NOM_ACTIVIDAD" AS "NOM_ACTIVIDAD"
+FROM "GUERRA"."VISTA_PAG_COND_PRUEBA" "VISTA_PAG_COND_PRUEBA"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

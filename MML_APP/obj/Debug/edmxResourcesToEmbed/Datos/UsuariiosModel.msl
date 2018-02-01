@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FuncionaModelStoreContainer" CdmEntityContainer="usuariosEntities">
+    <EntitySetMapping Name="FUNCIONA_PLS">
+      <EntityTypeMapping TypeName="FuncionaModel.FUNCIONA_PLS">
+        <MappingFragment StoreEntitySet="FUNCIONA_PLS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
