@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserLocalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PASSWO" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ABREVI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="INICIO" Type="DateTime" />
+    <Property Name="CARGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NIVEL" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="OFICINA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="C_USUARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="F_CONTROL" Type="DateTime" />
+    <Property Name="COD_MERCADO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="LocalUsuariosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+  </EntityContainer>
+</Schema>

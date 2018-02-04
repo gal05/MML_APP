@@ -262,6 +262,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginDummyController.cs" />
     <Compile Include="Controllers\OtrosController.cs" />
+    <Compile Include="Controllers\prueba1Controller.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Datos\ACCESO.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
@@ -614,9 +615,6 @@
     <Compile Include="Datos\FRONTECU.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Datos\FUNCIONA_PLS.cs">
-      <DependentUpon>UsuariiosModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Datos\GIRO.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
     </Compile>
@@ -643,6 +641,21 @@
     </Compile>
     <Compile Include="Datos\JUNIO2004.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\LocalUsuariosModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalUsuariosModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\LocalUsuariosModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalUsuariosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\LocalUsuariosModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalUsuariosModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Datos\MARCA.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
@@ -944,23 +957,8 @@
     <Compile Include="Datos\TMORA.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Datos\UsuariiosModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsuariiosModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Datos\UsuariiosModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsuariiosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Datos\UsuariiosModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UsuariiosModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Datos\USUARIO.cs">
-      <DependentUpon>MMLModel.tt</DependentUpon>
+      <DependentUpon>LocalUsuariosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Datos\USUARIOS.cs">
       <DependentUpon>MMLModel.tt</DependentUpon>
@@ -977,6 +975,7 @@
     <Compile Include="Metodos\Metodos.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClienteModels.cs" />
     <Compile Include="Models\Consulta.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\RecaudacionPuestoContext.cs" />
@@ -985,12 +984,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Datos\LocalUsuariosModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LocalUsuariosModel.edmx</DependentUpon>
+      <LastGenOutput>LocalUsuariosModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Datos\LocalUsuariosModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LocalUsuariosModel.edmx</DependentUpon>
+      <LastGenOutput>LocalUsuariosModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Datos\MMLModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MMLModel.edmx</DependentUpon>
@@ -1000,16 +1010,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MMLModel.edmx</DependentUpon>
       <LastGenOutput>MMLModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Datos\UsuariiosModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UsuariiosModel.edmx</DependentUpon>
-      <LastGenOutput>UsuariiosModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Datos\UsuariiosModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>UsuariiosModel.edmx</DependentUpon>
-      <LastGenOutput>UsuariiosModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -1039,19 +1039,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Datos\UsuariiosModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>UsuariiosModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Datos\UsuariiosModel.edmx.diagram">
-      <DependentUpon>UsuariiosModel.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Datos\MMLModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MMLModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Datos\MMLModel.edmx.diagram">
       <DependentUpon>MMLModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Datos\LocalUsuariosModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LocalUsuariosModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Datos\LocalUsuariosModel.edmx.diagram">
+      <DependentUpon>LocalUsuariosModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

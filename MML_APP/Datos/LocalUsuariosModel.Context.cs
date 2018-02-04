@@ -13,10 +13,10 @@ namespace MML_APP.Datos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class usuariosEntities : DbContext
+    public partial class LocalUsuariosEntities : DbContext
     {
-        public usuariosEntities()
-            : base("name=usuariosEntities")
+        public LocalUsuariosEntities()
+            : base("name=LocalUsuariosEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace MML_APP.Datos
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<FUNCIONA_PLS> FUNCIONA_PLS { get; set; }
+        public virtual DbSet<USUARIO> USUARIO { get; set; }
     }
 }

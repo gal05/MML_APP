@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UserLocalModelStoreContainer" CdmEntityContainer="LocalUsuariosEntities">
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="UserLocalModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="PASSWO" ColumnName="PASSWO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ABREVI" ColumnName="ABREVI" />
+          <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+          <ScalarProperty Name="CARGO" ColumnName="CARGO" />
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="OFICINA" ColumnName="OFICINA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="C_USUARIO" ColumnName="C_USUARIO" />
+          <ScalarProperty Name="F_CONTROL" ColumnName="F_CONTROL" />
+          <ScalarProperty Name="COD_MERCADO" ColumnName="COD_MERCADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

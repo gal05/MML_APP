@@ -14,12 +14,6 @@ namespace MML_APP.Datos
     
     public partial class USUARIO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USUARIO()
-        {
-            this.ACCESO = new HashSet<ACCESO>();
-        }
-    
         public string CODIGO { get; set; }
         public string PASSWO { get; set; }
         public string NOMBRE { get; set; }
@@ -32,8 +26,5 @@ namespace MML_APP.Datos
         public string C_USUARIO { get; set; }
         public Nullable<System.DateTime> F_CONTROL { get; set; }
         public string COD_MERCADO { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ACCESO> ACCESO { get; set; }
     }
 }
